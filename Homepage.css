@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* ===== VARIABLES (makes it cleaner & reusable) ===== */
+/* ===== VARIABLES ===== */
 :root {
   --gold: #D4AF37;
   --gold-light: #F5D76E;
