@@ -1,5 +1,13 @@
 h1 {
     font: bold;
-    color: #F7DD7D;
+    color: #89D4FF;
     text-align: center;
+}
+#logo {
+    width: 100pt;
+    height: 100pt;
+    float: left;
+}
+body {
+    background-color: black;
 }
