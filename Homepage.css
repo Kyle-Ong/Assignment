@@ -331,3 +331,87 @@ header {
   color: inherit;
   text-decoration: none;
 }
+
+#Title_about{
+  text-align: center;
+}
+
+.TeamContainer{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.TeamCard {
+  width: 300px;
+  background-color: #0f1720;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+.TeamCard img {
+  width: 180px; height: 200px;
+}
+
+.About {
+  padding: 0 20px;
+}
+
+.ContactCheckBox {
+  display: none;
+}
+
+.ContactButtonLabel {
+  display: inline-block;
+  margin-top:10px ;
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.ContactButtonLabel :hover {
+  box-shadow: 0 0 15px;
+}
+
+.ContactList {
+  display: none;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ContactList ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.ContactList li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.ContactCheckBox:checked + .ContactButtonLabel + .ContactList {
+  display: block;
+}
+
+.TeamCard {
+  position: relative;
+}
+
+#GroupImg {
+  width: 50%;
+  height: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+#LabelAbout {
+  text-align: center;
+  color: #F5D76E;
+}
