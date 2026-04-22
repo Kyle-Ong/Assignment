@@ -89,23 +89,37 @@ body {
 
 /* ===== BUTTON ===== */
 .cta-btn {
-  margin-top: 30px;
-  padding: 15px 40px;
+  display: inline-block;
+  padding: 14px 36px;
   border-radius: 12px;
-  border: none;
 
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  color: var(--bg-dark);
+  background: linear-gradient(90deg, #D4AF37, #F5D76E);
+  color: #020617;
 
-  cursor: pointer;
-  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
 }
 
 .cta-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 25px rgba(212,175,55,0.6);
 }
+.top-cta {
+  margin-top: 25px;
+}
+.apply-cta {
+  display: flex;
+  justify-content: center;
 
+  margin: 80px 0;
+}
+.apply-cta .cta-btn {
+  font-size: 16px;
+  padding: 18px 50px;
+}
 /* ===== WHY SECTION ===== */
 .why-section {
   padding: 100px 60px;
@@ -223,4 +237,179 @@ body {
     width: 250px;
     height: 250px;
   }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  padding: 80px 60px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  color: var(--text-light);
+}
+
+/* MAP */
+.map-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 15px;
+}
+
+
+/* ===== CONNECT SECTION ===== */
+.connect-section {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.connect-section h2 {
+  color: var(--gold);
+  margin-bottom: 30px;
+}
+
+.connect-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.connect-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.connect-btn:hover {
+  background: var(--gold);
+  color: black;
+  transform: translateY(-3px);
+}
+
+.phone-box {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.08);
+}
+
+
+/* ===== CTA BUTTON ===== */
+.bottom-cta {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.bottom-cta button {
+  padding: 18px 50px;
+  border-radius: 40px;
+  border: none;
+  font-size: 16px;
+  color: white;
+
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bottom-cta button:hover {
+  transform: scale(1.08);
+}
+
+
+/* ===== FOOTER BASE ===== */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px 60px;
+  margin-top: 80px;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+
+  border-top: 1px solid rgba(212,175,55,0.2);
+  box-shadow: 0 -5px 30px rgba(0,0,0,0.4);
+}
+
+/* ===== FOOTER SECTIONS ===== */
+.footer-left,
+.footer-right {
+  width: 25%;
+}
+
+.footer-center {
+  width: 50%;
+  text-align: center;
+  font-size: 14px;
+  color: #CBD5E1;
+}
+
+.footer-center span {
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+/* ===== LINKS ===== */
+.footer a {
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+/* GitHub (gold glow) */
+.footer-left a {
+  color: #D4AF37;
+}
+
+.footer-left a:hover {
+  color: #F5D76E;
+  text-shadow: 0 0 12px rgba(212,175,55,0.8);
+}
+
+/* Jira (blue glow) */
+.footer-right a {
+  color: #4DA6FF;
+}
+
+.footer-right a:hover {
+  color: #80C1FF;
+  text-shadow: 0 0 12px rgba(77,166,255,0.8);
+}
+
+/* ===== HOVER ANIMATION ===== */
+.footer a:hover {
+  transform: translateY(-2px);
 }

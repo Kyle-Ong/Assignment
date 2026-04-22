@@ -168,3 +168,8 @@ header {
     font-size: 16px;
   }
 }
+
+.menu-links a.active {
+  color: #D4AF37;
+  font-weight: bold;
+}
