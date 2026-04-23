@@ -1,0 +1,226 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --gold: #D4AF37;
+  --gold-light: #F5D76E;
+  --bg-dark: #020617;
+  --bg-mid: #0f172a;
+  --text-light: #CBD5E1;
+  --text-dim: #94A3B8;
+}
+
+/* ===== BODY ===== */
+body {
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at 20% 30%, rgba(212,175,55,0.08), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 40%),
+    linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  padding: 120px 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-left {
+  max-width: 600px;
+}
+
+.hero-left h4 {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.hero-left h1 {
+  font-size: 60px;
+  line-height: 1.1;
+}
+
+.hero-left span {
+  color: var(--gold);
+}
+
+.hero-left p {
+  margin-top: 20px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* ===== HERO RIGHT ===== */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== GLOW LOGO ===== */
+.circle-glow {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(circle, rgba(212,175,55,0.15), transparent);
+  box-shadow: 0 0 60px rgba(212,175,55,0.3);
+}
+
+.circle-glow img {
+  width: 140px;
+}
+
+/* ===== BUTTON ===== */
+.cta-btn {
+  margin-top: 30px;
+  padding: 15px 40px;
+  border-radius: 12px;
+  border: none;
+
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  color: var(--bg-dark);
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(212,175,55,0.6);
+}
+
+/* ===== WHY SECTION ===== */
+.why-section {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.why-section h2 {
+  color: var(--gold);
+  margin-bottom: 50px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212,175,55,0.2);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 25px rgba(212,175,55,0.3);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: var(--gold);
+}
+
+.why-card p {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+  padding: 100px 60px;
+}
+
+.skills-container {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.skills-left,
+.skills-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.skills-left h2 {
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.skills-left p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+/* ===== SKILL BAR ===== */
+.bar {
+  height: 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 10px;
+  text-align: right;
+  padding-right: 10px;
+  font-size: 12px;
+  color: var(--bg-dark);
+}
+
+.skill:hover .fill {
+  box-shadow: 0 0 10px rgba(212,175,55,0.6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px;
+  }
+
+  .hero-left h1 {
+    font-size: 42px;
+  }
+
+  .circle-glow {
+    width: 250px;
+    height: 250px;
+  }
+}
