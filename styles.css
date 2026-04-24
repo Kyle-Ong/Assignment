@@ -11,12 +11,19 @@ html {
 
 /* BODY */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   color: #fff;
+
   background:
     radial-gradient(circle at 70% 30%, rgba(255,200,0,0.15), transparent),
     radial-gradient(circle at 20% 80%, rgba(0,80,255,0.25), transparent),
     #000;
+}
+
+/* HEADINGS (premium look) */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
 }
 
 /* HERO */
@@ -26,7 +33,7 @@ body {
 }
 
 .hero h1 {
-  font-size: 44px;
+  font-size: 48px;
   margin-bottom: 10px;
 }
 
@@ -55,7 +62,7 @@ body {
 .buttons a:hover {
   background: gold;
   color: black;
-  box-shadow: 0 0 10px gold;
+  box-shadow: 0 0 12px gold;
 }
 
 /* JOB SECTION */
@@ -84,7 +91,7 @@ body {
   border-radius: 18px;
   padding: 22px;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
   display: flex;
   flex-direction: column;
@@ -96,8 +103,8 @@ body {
 
 /* HOVER */
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 30px rgba(255,215,0,0.8);
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(255,215,0,0.9);
 }
 
 /* CLICK TARGET */
@@ -127,6 +134,7 @@ body {
   color: #bbb;
   font-size: 14px;
   margin-bottom: 12px;
+  line-height: 1.5;
 }
 
 /* LIST */
@@ -160,6 +168,12 @@ body {
   border-radius: 6px;
   font-size: 12px;
   border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: gold;
+  color: black;
 }
 
 /* DEADLINE */
@@ -184,6 +198,7 @@ button {
 button:hover {
   background: orange;
   transform: scale(1.05);
+  box-shadow: 0 0 12px gold;
 }
 
 /* WHY SECTION */
@@ -228,7 +243,7 @@ button:hover {
 
 .why-grid div:hover {
   border-color: gold;
-  box-shadow: 0 0 15px gold;
+  box-shadow: 0 0 18px gold;
 }
 
 /* FOOTER */
@@ -238,4 +253,15 @@ footer {
   border-top: 1px solid gold;
   color: #aaa;
   font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
