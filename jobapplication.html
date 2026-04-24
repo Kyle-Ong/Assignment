@@ -8,15 +8,17 @@
 
   <title>Ethical Edge | Job Application</title>
 
- <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-  <!-- CSS files -->
+  <!-- Google Font (EXISTING) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS files (EXISTING) -->
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="jobapplication.css">
 </head>
 
 <body>
 
-  <!-- ===== HEADER / NAV BAR ===== -->
+  <!-- ===== HEADER / NAV BAR (NO CHANGE) ===== -->
   <input type="checkbox" id="menu-toggle">
 
   <header>
@@ -32,11 +34,10 @@
     </div>
   </header>
 
-  <!-- ===== SIDE MENU ===== -->
+  <!-- ===== SIDE MENU (NO CHANGE) ===== -->
   <nav class="side-menu">
     <label for="menu-toggle" class="close-btn">✕</label>
 
-    
     <div class="menu-links">
       <a href="jobapplication.html">Job Application</a>
       <a href="jobdescription.html">Job Description</a>
@@ -57,10 +58,14 @@
     <section>
       <h2>Job Application Form</h2>
 
-      <form>
+      <!-- NEW: notice explaining * required fields -->
+      <p><strong>*</strong> Fields marked with an asterisk are mandatory.</p>
 
-        <!-- Job Reference Number -->
-        <label for="jobRef">Job Reference Number</label>
+      <!-- UPDATED: form now uses POST method and submits to formtest.php -->
+      <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+
+        <!-- Job Reference Number (EXISTING, * added) -->
+        <label for="jobRef">Job Reference Number *</label>
         <select id="jobRef" name="jobRef" required>
           <option value="">Select Job Reference</option>
           <option value="FE101">Frontend Developer (FE101)</option>
@@ -70,41 +75,44 @@
           <option value="IT105">IT Support Specialist (IT105)</option>
         </select>
 
-        <!-- First Name -->
-        <label for="fname">First Name</label>
+        <!-- Name fields (* ADDED) -->
+        <label for="fname">First Name *</label>
         <input type="text" id="fname" name="fname" maxlength="20" required>
 
-        <!-- Last Name -->
-        <label for="lname">Last Name</label>
+        <label for="lname">Last Name *</label>
         <input type="text" id="lname" name="lname" maxlength="20" required>
 
-        <!-- Date of Birth -->
-        <label for="dob">Date of Birth</label>
-        <input type="text"
-               id="dob"
-               name="dob"
-               placeholder="dd/mm/yyyy"
-               pattern="\d{2}/\d{2}/\d{4}"
-               title="Format: dd/mm/yyyy. Applicants must be 18 years or older."
-               required>
+        <!-- NEW: age requirement info -->
+        <p>Applicants must be at least <strong>18 years old</strong> to apply.</p>
 
-        <!-- Gender -->
+        <!-- UPDATED: DOB uses calendar picker + 18+ restriction -->
+      <label for="dob">Date of Birth *</label>  
+<input type="date"
+       id="dob"
+       name="dob"
+       min="1900-01-01"
+       max="2008-04-22"
+       required
+       onfocus="this.showPicker()">
+
+
+        <!-- Gender (* ADDED) -->
         <fieldset>
-          <legend>Gender</legend>
+          <legend>Gender *</legend>
           <label><input type="radio" name="gender" required> Male</label>
           <label><input type="radio" name="gender"> Female</label>
           <label><input type="radio" name="gender"> Other</label>
         </fieldset>
 
-        <!-- Address -->
-        <label for="street">Street Address</label>
+        <!-- Address (* ADDED) -->
+        <label for="street">Street Address *</label>
         <input type="text" id="street" maxlength="40" required>
 
-        <label for="suburb">Suburb/Town</label>
+        <label for="suburb">Suburb/Town *</label>
         <input type="text" id="suburb" maxlength="40" required>
 
-        <!-- ✅ Malaysian State -->
-        <label for="state">State</label>
+        <!-- State/Territory (* ADDED, options unchanged) -->
+        <label for="state">State/Territory *</label>
         <select id="state" name="state" required>
           <option value="">Select State</option>
           <option>Johor</option>
@@ -125,39 +133,57 @@
           <option>Labuan</option>
         </select>
 
-        <!-- ✅ Malaysian Postcode -->
-        <label for="postcode">Postcode</label>
-        <input type="text"
-               id="postcode"
-               name="postcode"
-               pattern="\d{5}"
-               title="Malaysian postcode must be exactly 5 digits"
-               required>
+        <!-- Postcode (EXISTING pattern, * ADDED) -->
+        <label for="postcode">Postcode *</label>
+        <input type="text" id="postcode" name="postcode" pattern="\d{5}" required>
 
-        <!-- Email -->
-        <label for="email">Email</label>
+        <!-- Contact (* ADDED) -->
+        <label for="email">Email *</label>
         <input type="email" id="email" name="email" required>
 
-        <!-- Phone -->
-        <label for="phone">Phone Number</label>
-        <input type="tel"
-               id="phone"
-               name="phone"
-               pattern="\d{8,12}"
-               title="8 to 12 digits"
-               required>
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" pattern="\d{8,12}" required>
 
-        <!-- Skills -->
+        <!-- NEW: Educational Background section -->
         <fieldset>
-          <legend>Skill List</legend>
+          <legend>Educational Background *</legend>
+
+          <label for="qualification">Highest Qualification *</label>
+          <select id="qualification" name="qualification" required>
+            <option value="">Select Qualification</option>
+            <option>Secondary School</option>
+            <option>Certificate</option>
+            <option>Diploma</option>
+            <option>Bachelor Degree</option>
+            <option>Master Degree</option>
+            <option>PhD</option>
+          </select>
+
+          <label for="field">Field of Study *</label>
+          <input type="text" id="field" name="field" required>
+
+          <label for="institution">Institution *</label>
+          <input type="text" id="institution" name="institution" required>
+
+          <label for="year">Year of Completion *</label>
+          <input type="number" id="year" name="year" min="1900" max="2026" required>
+        </fieldset>
+
+        <!-- UPDATED: more skills added -->
+        <fieldset>
+          <legend>Skill List *</legend>
           <label><input type="checkbox" required> HTML</label>
           <label><input type="checkbox"> CSS</label>
           <label><input type="checkbox"> JavaScript</label>
+          <label><input type="checkbox"> React</label> <!-- NEW -->
+          <label><input type="checkbox"> UI/UX Design</label> <!-- NEW -->
+          <label><input type="checkbox"> Git & Version Control</label> <!-- NEW -->
+          <label><input type="checkbox"> Problem Solving</label> <!-- NEW -->
           <label><input type="checkbox"> Other skills…</label>
         </fieldset>
 
-        <!-- Other Skills (REQUIRED) -->
-        <label for="otherskills">Other skills</label>
+        <!-- Other Skills (* ADDED) -->
+        <label for="otherskills">Other Skills *</label>
         <textarea id="otherskills" name="otherskills" rows="4" required></textarea>
 
         <button type="submit">Apply Now</button>
