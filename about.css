@@ -80,7 +80,6 @@
   color: #F5D76E;
 }
 
-/* ===== INFO 按钮样式 ===== */
 .InfoCheckBox {
   display: none;
 }
@@ -104,7 +103,6 @@
   transform: scale(1.02);
 }
 
-/* ===== 漂浮浮层 ===== */
 .InfoPopup {
   position: fixed;
   top: 50%;
@@ -157,7 +155,6 @@
   color: var(--gold);
 }
 
-/* 关闭按钮 */
 .InfoCloseBtn {
   position: absolute;
   top: 12px;
@@ -173,7 +170,6 @@
   transform: scale(1.1);
 }
 
-/* 点击浮层外部关闭（点击背景关闭） */
 .InfoPopup::before {
   content: '';
   position: fixed;
