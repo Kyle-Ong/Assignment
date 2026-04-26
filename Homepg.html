@@ -1,195 +1,197 @@
-This is my html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta setup for character encoding and responsive design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ethical Edge</title>
+  <title>Ethical Edge</title>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="navbar.css">
-<link rel="stylesheet" href="Homepage.css">
+  <!-- External fonts and icon libraries -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+  <!-- Project stylesheets -->
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="Homepage.css">
 </head>
 
 <body>
 
+<!-- Hidden checkbox used to toggle the side navigation menu -->
 <input type="checkbox" id="menu-toggle">
 
-<!-- HEADER -->
+<!-- ================= HEADER / NAVIGATION ================= -->
 <header>
 
-<label for="menu-toggle" class="menu-icon">☰</label>
+  <!-- Hamburger icon to open side menu -->
+  <label for="menu-toggle" class="menu-icon">☰</label>
 
-<div class="brand">
-<a href="Homepg.html"><img src="Image/Logo.JPG" alt="Ethical Edge Logo" title="Home_page"></a>
+  <!-- Branding section with logo and title -->
+  <div class="brand">
+    <a href="Homepg.html">
+      <img src="Image/Logo.JPG" alt="Ethical Edge Logo" title="Home_page">
+    </a>
 
-<div class="brand-text">
-<h1>ETHICAL <span>EDGE</span></h1>
-<p>Integrity. Impact. Excellence.</p>
-</div>
-</div>
+    <div class="brand-text">
+      <h1>ETHICAL <span>EDGE</span></h1>
+      <p>Integrity. Impact. Excellence.</p>
+    </div>
+  </div>
 
 </header>
 
-<!-- SIDE MENU -->
+<!-- ================= SIDE NAVIGATION MENU ================= -->
 <div class="side-menu">
 
-<label for="menu-toggle" class="close-btn">✕</label>
+  <!-- Close button for side menu -->
+  <label for="menu-toggle" class="close-btn">✕</label>
 
-<div class="menu-links">
-<a href="Homepg.html" class="active">Homepage</a>
-<a href="jobapplication.html">Job Application</a>
-<a href="jobs.html">Job Description</a>
-<a href="About.html">About</a>
-</div>
- 
-<div class="menu-footer">
-<img src="Image/Logo.JPG">
-<h2>ETHICAL <span>EDGE</span></h2>
-</div>
+  <!-- Navigation links -->
+  <div class="menu-links">
+    <a href="Homepg.html" class="active">Homepage</a>
+    <a href="jobs.html">Job Description</a>
+    <a href="jobapplication.html">Job Application</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <!-- Footer branding inside menu -->
+  <div class="menu-footer">
+    <img src="Image/Logo.JPG" alt="Logo">
+    <h2>ETHICAL <span>EDGE</span></h2>
+  </div>
 
 </div>
 
+<!-- Overlay to close menu when clicking outside -->
 <label for="menu-toggle" class="overlay"></label>
 
-<!-- HERO -->
+<!-- ================= HERO SECTION ================= -->
 <section class="hero">
 
-<div class="hero-left">
+  <div class="hero-left">
 
-<h4>BUILD WITH PURPOSE</h4>
+    <h4>BUILD WITH PURPOSE</h4>
 
-<h1>
-SHAPE A BETTER <br>
-<span>TOMORROW</span>
-</h1>
+    <!-- Main headline -->
+    <h1>
+      SHAPE A BETTER <br>
+      <span>TOMORROW</span>
+    </h1>
 
-<p>
-At Ethical Edge, we empower innovators to create solutions that drive real impact.
-</p>
+    <!-- Introductory description -->
+    <p>
+      At Ethical Edge, we empower innovators to create solutions that drive real impact.
+    </p>
 
-<div class="top-cta">
-  <a href="jobs.html" class="cta-btn">→ Explore Career Opportunities with us</a>
-</div>
+    <!-- FIRST CTA -->
+    <div class="top-cta">
+      <a href="jobs.html" class="cta-btn">→ Explore Career Opportunities with us</a>
+    </div>
 
-</div>
-
-<!-- RIGHT SIDE VISUAL -->
-<div class="hero-right">
-
-
-</div>
+  </div>
 
 </section>
 
-<!-- WHY SECTION -->
+<!-- ================= WHY SECTION ================= -->
 <section class="why-section">
 
-<h2>WHY ETHICAL EDGE?</h2>
+  <h2>WHY ETHICAL EDGE?</h2>
 
-<div class="why-grid">
+  <!-- Grid layout for company values -->
+  <div class="why-grid">
 
-<div class="why-card">
-<div class="icon">👥</div>
-<h3>People First</h3>
-<p>We value people, ideas and collaboration.</p>
-</div>
+    <div class="why-card">
+      <div class="icon">👥</div>
+      <h3>People First</h3>
+      <p>We value people, ideas and collaboration.</p>
+    </div>
 
-<div class="why-card">
-<div class="icon">🚀</div>
-<h3>Innovate Boldly</h3>
-<p>Solve meaningful problems with cutting-edge technology.</p>
-</div>
+    <div class="why-card">
+      <div class="icon">🚀</div>
+      <h3>Innovate Boldly</h3>
+      <p>Solve meaningful problems with cutting-edge technology.</p>
+    </div>
 
-<div class="why-card">
-<div class="icon">🛡️</div>
-<h3>Operate with Integrity</h3>
-<p>We uphold transparency, trust and accountability.</p>
-</div>
+    <div class="why-card">
+      <div class="icon">🛡️</div>
+      <h3>Operate with Integrity</h3>
+      <p>We uphold transparency, trust and accountability.</p>
+    </div>
 
-<div class="why-card">
-<div class="icon">🏆</div>
-<h3>Excellence Always</h3>
-<p>We strive for quality in everything we do.</p>
-</div>
+    <div class="why-card">
+      <div class="icon">🏆</div>
+      <h3>Excellence Always</h3>
+      <p>We strive for quality in everything we do.</p>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
-<!-- CTA -->
+<!-- ================= SECOND CTA ================= -->
 <div class="apply-cta">
   <a href="jobapplication.html" class="cta-btn">→ Apply and Join Our Team</a>
 </div>
 
-
+<!-- ================= SKILLS / STRENGTH SECTION ================= -->
 <section class="skills-section">
 
-<div class="skills-container">
+  <div class="skills-container">
 
-<!-- LEFT SIDE -->
-<div class="skills-left">
+    <!-- Left description -->
+    <div class="skills-left">
+      <h2>Our Strength</h2>
+      <p>We are a startup focused on strengthening our product and design team...</p>
+      <p>From frontend innovation to secure backend systems...</p>
+    </div>
 
-<h2>Our Strength</h2>
+    <!-- Right progress bars -->
+    <div class="skills-right">
 
-<p>
-We are a startup focused on strengthening our product and design team 
-by bringing in top-tier tech talent. Our goal is to build scalable, 
-user-centered solutions with strong engineering foundations.
-</p>
+      <!-- Individual skill bar -->
+      <div class="skill">
+        <span>Frontend Development</span>
+        <div class="bar"><div class="fill" style="width:90%">90%</div></div>
+      </div>
 
-<p>
-From frontend innovation to secure backend systems, we invest in 
-skills that push our product forward and deliver real impact.
-</p>
+      <div class="skill">
+        <span>UI/UX Design</span>
+        <div class="bar"><div class="fill" style="width:85%">85%</div></div>
+      </div>
 
-</div>
+      <div class="skill">
+        <span>Product Design</span>
+        <div class="bar"><div class="fill" style="width:80%">80%</div></div>
+      </div>
 
-<!-- RIGHT SIDE -->
-<div class="skills-right">
+      <div class="skill">
+        <span>UI Development</span>
+        <div class="bar"><div class="fill" style="width:75%">75%</div></div>
+      </div>
 
-<div class="skill">
-<span>Frontend Development</span>
-<div class="bar">
-<div class="fill" style="width:90%">90%</div>
-</div>
-</div>
+      <div class="skill">
+        <span>Specialized IT Support</span>
+        <div class="bar"><div class="fill" style="width:70%">70%</div></div>
+      </div>
 
-<div class="skill">
-<span>UI/UX Design</span>
-<div class="bar">
-<div class="fill" style="width:85%">85%</div>
-</div>
-</div>
+    </div>
 
-<div class="skill">
-<span>Backend Engineering</span>
-<div class="bar">
-<div class="fill" style="width:80%">80%</div>
-</div>
-</div>
+  </div>
 
-<div class="skill">
-<span>Cybersecurity</span>
-<div class="bar">
-<div class="fill" style="width:75%">75%</div>
-</div>
-</div>
 </section>
-<!-- CTA -->
+
+<!-- ================= THIRD CTA ================= -->
 <div class="bottom-cta">
   <a href="About.html" class="cta-btn">→ Explore More About Us</a>
 </div>
 
-<!-- CONTACT SECTION -->
+<!-- ================= CONTACT SECTION ================= -->
 <section class="contact-section" id="Location">
 
   <div class="contact-container">
 
-    <!-- LEFT SIDE -->
+    <!-- Company contact details -->
     <div class="contact-info">
       <h2>Contact Information</h2>
 
@@ -203,24 +205,23 @@ skills that push our product forward and deliver real impact.
       <p>✉ info@ethicaledge.com</p>
     </div>
 
-    <!-- RIGHT SIDE (MAP) -->
+    <!-- Embedded Google Map -->
     <div class="map-box">
-      <iframe 
-        src="https://www.google.com/maps?q=Petaling+Jaya&output=embed">
-      </iframe>
+      <iframe src="https://www.google.com/maps?q=Petaling+Jaya&output=embed"></iframe>
     </div>
 
   </div>
 
 </section>
 
-
+<!-- ================= SOCIAL / CONNECT SECTION ================= -->
 <section class="connect-section">
 
   <h2>Connect With Us</h2>
 
   <div class="connect-buttons">
 
+    <!-- External links to contact platforms -->
     <a href="https://www.facebook.com/share/18nWDdgKT2/" target="_blank" class="contact-item">
       🌐 Follow us on Facebook
     </a>
@@ -241,26 +242,30 @@ skills that push our product forward and deliver real impact.
 
 </section>
 
-<!-- FOOTER -->
- <footer class="footer">
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
 
+  <!-- GitHub repository link -->
   <div class="footer-left">
-  <a href="https://github.com/Kyle-Ong/Assignment.git" target="_blank">
-    <i class="fab fa-github"></i> GitHub Repository
-  </a>
-</div>
+    <a href="https://github.com/Kyle-Ong/Assignment.git" target="_blank">
+      <i class="fab fa-github"></i> GitHub Repository
+    </a>
+  </div>
 
+  <!-- Copyright -->
   <div class="footer-center">
     © 2026 Ethical Edge <br>
     <span>Integrity • Innovation • Excellence</span>
   </div>
 
- <div class="footer-right">
-  <a href="https://student-team-d84k44vi.atlassian.net" target="_blank">
-    <i class="fab fa-jira"></i> Jira Dashboard
-  </a>
-</div>
+  <!-- Jira project link -->
+  <div class="footer-right">
+    <a href="https://student-team-d84k44vi.atlassian.net" target="_blank">
+      <i class="fab fa-jira"></i> Jira Dashboard
+    </a>
+  </div>
 
 </footer>
+
 </body>
 </html>

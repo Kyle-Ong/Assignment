@@ -1,13 +1,18 @@
-/* ===== RESET ===== */
+/* ===== GLOBAL RESET ===== */
+/* Removes default browser spacing and ensures consistent box sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Enables smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
-/* ===== VARIABLES ===== */
+
+/* ===== DESIGN VARIABLES ===== */
+/* Centralised color system for consistency and easy maintenance */
 :root {
   --gold: #D4AF37;
   --gold-light: #F5D76E;
@@ -17,7 +22,8 @@ html {
   --text-dim: #94A3B8;
 }
 
-/* ===== BODY ===== */
+/* ===== BODY STYLING ===== */
+/* Applies global typography and layered gradient background for visual depth */
 body {
   font-family: 'Orbitron', sans-serif;
   color: white;
@@ -29,7 +35,8 @@ body {
     linear-gradient(135deg, var(--bg-dark), var(--bg-mid), var(--bg-dark));
 }
 
-/* ===== HERO ===== */
+/* ===== HERO SECTION ===== */
+/* Full viewport section with layered gradient overlay for readability */
 .hero {
   min-height: 100vh;
   padding: 120px 60px;
@@ -44,15 +51,15 @@ body {
       rgba(2,6,23,0.4) 75%,
       rgba(2,6,23,0.2) 100%
     ),
-    url("Image/hero-image.png") center/cover no-repeat;
+    url("hero-image.png") center/cover no-repeat;
 }
 
-/* ===== HERO TEXT CONTAINER ===== */
+/* ===== HERO CONTENT CONTAINER ===== */
+/* Glassmorphism card used to highlight main content */
 .hero-left {
   max-width: 800px;
   z-index: 2;
 
-  /* LIGHT GLASS (not heavy box) */
   background: rgba(15, 23, 42, 0.35);
   backdrop-filter: blur(12px);
 
@@ -61,19 +68,18 @@ body {
 
   border: 1px solid rgba(212,175,55,0.15);
 
-  /* softer shadow */
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 
   transition: 0.3s ease;
 }
 
-/* subtle hover (less aggressive) */
+/* Subtle hover effect to create depth and interactivity */
 .hero-left:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 50px rgba(0,0,0,0.6);
 }
 
-/* ===== TEXT ===== */
+/* ===== HERO TEXT ===== */
 .hero-left h4 {
   color: var(--gold);
   letter-spacing: 2px;
@@ -87,6 +93,7 @@ body {
   margin-bottom: 15px;
 }
 
+/* Highlighted keyword styling */
 .hero-left span {
   color: var(--gold);
 }
@@ -98,7 +105,9 @@ body {
   font-size: 16px;
   max-width: 600px;
 }
-/* ===== BUTTON ===== */
+
+/* ===== BUTTON STYLING ===== */
+/* Primary call-to-action button with gradient and hover animation */
 .cta-btn {
   display: inline-block;
   padding: 14px 36px;
@@ -114,24 +123,30 @@ body {
   transition: 0.3s ease;
 }
 
+/* Hover interaction for emphasis */
 .cta-btn:hover {
   transform: scale(1.08);
   box-shadow: 0 0 25px rgba(212,175,55,0.6);
 }
+
+/* Spacing adjustments for CTA placement */
 .top-cta {
   margin-top: 25px;
 }
+
 .apply-cta {
   display: flex;
   justify-content: center;
-
   margin: 80px 0;
 }
+
 .apply-cta .cta-btn {
   font-size: 16px;
   padding: 18px 50px;
 }
+
 /* ===== WHY SECTION ===== */
+/* Grid layout to present company values clearly */
 .why-section {
   padding: 100px 60px;
   text-align: center;
@@ -142,12 +157,14 @@ body {
   margin-bottom: 50px;
 }
 
+/* Responsive grid using auto-fit */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
 }
 
+/* Card design with glass effect and hover elevation */
 .why-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(212,175,55,0.2);
@@ -161,6 +178,7 @@ body {
   box-shadow: 0 0 25px rgba(212,175,55,0.3);
 }
 
+/* Icon styling for visual emphasis */
 .icon {
   font-size: 28px;
   margin-bottom: 15px;
@@ -173,6 +191,7 @@ body {
 }
 
 /* ===== SKILLS SECTION ===== */
+/* Flex layout for responsive content alignment */
 .skills-section {
   padding: 100px 60px;
 }
@@ -189,6 +208,7 @@ body {
   min-width: 300px;
 }
 
+/* Skill text styling */
 .skills-left h2 {
   color: var(--gold);
   margin-bottom: 20px;
@@ -200,6 +220,7 @@ body {
   line-height: 1.6;
 }
 
+/* Individual skill block */
 .skill {
   margin-bottom: 25px;
 }
@@ -210,7 +231,8 @@ body {
   color: var(--text-light);
 }
 
-/* ===== SKILL BAR ===== */
+/* ===== PROGRESS BAR ===== */
+/* Background bar */
 .bar {
   height: 12px;
   background: rgba(255,255,255,0.1);
@@ -218,6 +240,7 @@ body {
   overflow: hidden;
 }
 
+/* Filled progress with gradient */
 .fill {
   height: 100%;
   background: linear-gradient(90deg, var(--gold), var(--gold-light));
@@ -228,6 +251,7 @@ body {
   color: var(--bg-dark);
 }
 
+/* Glow effect on hover */
 .skill:hover .fill {
   box-shadow: 0 0 10px rgba(212,175,55,0.6);
 }
@@ -237,6 +261,7 @@ body {
   padding: 80px 60px;
 }
 
+/* Container layout for contact info + map */
 .contact-container {
   display: flex;
   gap: 40px;
@@ -246,6 +271,7 @@ body {
   border-radius: 20px;
 }
 
+/* Contact text styling */
 .contact-info {
   flex: 1;
   min-width: 300px;
@@ -261,7 +287,7 @@ body {
   color: var(--text-light);
 }
 
-/* MAP */
+/* Embedded map styling */
 .map-box {
   flex: 1;
   min-width: 300px;
@@ -274,30 +300,8 @@ body {
   border-radius: 15px;
 }
 
-/* ===== CTA BUTTON ===== */
-.bottom-cta {
-  text-align: center;
-  margin: 60px 0;
-}
-
-.bottom-cta button {
-  padding: 18px 50px;
-  border-radius: 40px;
-  border: none;
-  font-size: 16px;
-  color: white;
-
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.bottom-cta button:hover {
-  transform: scale(1.08);
-}
-
-
-/* ===== FOOTER BASE ===== */
+/* ===== FOOTER ===== */
+/* Flex layout for structured footer content */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -306,14 +310,14 @@ body {
   padding: 25px 60px;
   margin-top: 80px;
 
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(15px);
+  background: linear-gradient(135deg, #000000, #020617);
 
+  backdrop-filter: blur(15px);
   border-top: 1px solid rgba(212,175,55,0.2);
   box-shadow: 0 -5px 30px rgba(0,0,0,0.4);
 }
 
-/* ===== FOOTER SECTIONS ===== */
+/* Footer layout distribution */
 .footer-left,
 .footer-right {
   width: 25%;
@@ -331,7 +335,7 @@ body {
   color: #94A3B8;
 }
 
-/* ===== LINKS ===== */
+/* Link styling and hover animation */
 .footer a {
   text-decoration: none;
   font-weight: 500;
@@ -339,93 +343,13 @@ body {
   transition: 0.3s ease;
 }
 
-/* GitHub (gold glow) */
-.footer-left a {
-  color: #D4AF37;
-}
-
-.footer-left a:hover {
-  color: #F5D76E;
-  text-shadow: 0 0 12px rgba(212,175,55,0.8);
-}
-
-/* Jira (blue glow) */
-.footer-right a {
-  color: #4DA6FF;
-}
-
-.footer-right a:hover {
-  color: #80C1FF;
-  text-shadow: 0 0 12px rgba(77,166,255,0.8);
-}
-
-/* ===== HOVER ANIMATION ===== */
-.footer a:hover {
-  transform: translateY(-2px);
-}
-/* ===== CONNECT SECTION ===== */
-.connect-section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-/* TITLE */
-.connect-section h2 {
-  color: var(--gold);
-  margin-bottom: 40px;
-}
-
-/* BUTTON GRID */
-.connect-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-/* UNIFIED BUTTON STYLE */
-.contact-item {
-  display: inline-block;
-  padding: 15px 30px;
-  border-radius: 12px;
-
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-
-  color: var(--gold);
-
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(212,175,55,0.3);
-  backdrop-filter: blur(10px);
-
-  transition: 0.3s;
-}
-
-/* HOVER EFFECT */
-.contact-item:hover {
-  color: white;
-  transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(212,175,55,0.5);
-}
-.footer {
-  background: linear-gradient(
-    135deg,
-    #000000,
-    #020617
-  );
-}
-.bottom-cta .cta-btn {
-  padding: 18px 50px;
-  border-radius: 40px;
-  background: linear-gradient(90deg, #6a11cb, #2575fc);
-  color: white;
-  display: inline-block;
-}
+/* Accessibility: focus outline for keyboard navigation */
 a:focus, button:focus {
   outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
+
+/* Section highlight when navigated via anchor */
 section {
   transition: 0.4s ease;
 }
@@ -434,6 +358,9 @@ section:target {
   box-shadow: 0 0 30px rgba(212,175,55,0.4);
   border-radius: 20px;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Adjust layout for smaller screens */
 @media (max-width: 768px) {
 
   .hero {
@@ -442,10 +369,7 @@ section:target {
     padding: 100px 20px;
   }
 
-  .skills-container {
-    flex-direction: column;
-  }
-
+  .skills-container,
   .contact-container {
     flex-direction: column;
   }
